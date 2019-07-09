@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_height"
+        android:layout_width="400px"
+        android:layout_height="wrap_content"
+        android:hint="输入身高（单位：cm）" />
+
+    <EditText
+        android:id="@+id/et_weight"
+        android:layout_width="400px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="输入体重（单位：kg）" />
+
+    <EditText
+        android:id="@+id/et_age"
+        android:layout_width="400px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="输入年龄" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_man"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="男" />
+
+
+        <RadioButton
+            android:id="@+id/rb_women"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="女" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bt_examine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="开始测量" />
+
+</LinearLayout>

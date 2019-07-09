@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/tip_bottom_hide" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180px"
+        android:background="@color/white">
+
+
+        <TextView
+            android:id="@+id/tv_next"
+            style="@style/text_white"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="45px"
+            android:layout_marginTop="60px"
+            android:background="@drawable/button_next_selector"
+            android:textSize="24px" />
+
+
+        <TextView
+            android:id="@+id/tv_reexamine"
+            style="@style/text_blue"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:layout_toLeftOf="@id/tv_next"
+            android:background="@drawable/button_reexamine_selector"
+            android:textSize="24px" />
+
+
+        <TextView
+            android:id="@+id/tv_report"
+            style="@style/text_blue"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:layout_toLeftOf="@id/tv_reexamine"
+            android:background="@drawable/button_report_selector"
+            android:paddingBottom="12px"
+            android:paddingLeft="38px"
+            android:paddingRight="38px"
+            android:paddingTop="12px"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/text_mgray"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="350px"
+            android:text="@string/temp_result_tip"
+            android:textSize="18px" />
+
+    </RelativeLayout>
+
+</LinearLayout>

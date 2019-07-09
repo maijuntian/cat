@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="20px">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="50px"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_height"
+            style="@style/text_black"
+            android:layout_marginTop="200px"
+            android:text="身高：" />
+
+        <TextView
+            android:id="@+id/tv_weight"
+            style="@style/text_black"
+            android:layout_marginTop="15px"
+            android:text="体重：" />
+
+        <TextView
+            android:id="@+id/tv_sex"
+            style="@style/text_black"
+            android:layout_marginTop="15px"
+            android:text="性别：" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            style="@style/text_black"
+            android:layout_marginTop="15px"
+            android:text="年龄：" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="120px"
+        android:layout_marginRight="140px"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/bt_pre"
+            style="@style/text_black"
+            android:layout_marginBottom="15px"
+            android:visibility="invisible"
+            android:text="上一页" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_result"
+            android:layout_width="match_parent"
+            android:layout_height="300px"
+            android:scrollbars="none" />
+
+        <Button
+            android:id="@+id/bt_next"
+            style="@style/text_black"
+            android:layout_marginTop="15px"
+            android:text="下一页" />
+    </LinearLayout>
+
+</LinearLayout>

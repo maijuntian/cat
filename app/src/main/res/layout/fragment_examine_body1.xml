@@ -1,0 +1,143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="116px"
+        android:layout_marginTop="52px"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/text_black"
+            android:text="体成分"
+            android:textSize="36px"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/text_mgray"
+            android:layout_marginTop="7px"
+            android:text="Height/Weight/Component"
+            android:textSize="18px" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34px"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3px"
+                android:src="@mipmap/body_progress1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_step1"
+                    style="@style/text_blue"
+                    android:text="身高体重操作指示"
+                    android:textSize="20px" />
+
+                <TextView
+                    android:id="@+id/tv_step2"
+                    style="@style/text_mgray"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="6px"
+                    android:text="测量过程"
+                    android:textSize="20px" />
+
+                <TextView
+                    android:id="@+id/tv_step3"
+                    style="@style/text_mgray"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="6px"
+                    android:text="测量结果"
+                    android:textSize="20px" />
+
+
+                <TextView
+                    android:id="@+id/tv_step4"
+                    style="@style/text_mgray"
+                    android:layout_marginTop="6px"
+                    android:text="体脂操作指示"
+                    android:textSize="20px" />
+
+                <TextView
+                    android:id="@+id/tv_step5"
+                    style="@style/text_mgray"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="6px"
+                    android:text="测量过程"
+                    android:textSize="20px" />
+
+                <TextView
+                    android:id="@+id/tv_step6"
+                    style="@style/text_mgray"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="16px"
+                    android:text="测量结果"
+                    android:textSize="20px" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_step1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <ImageView
+            android:id="@+id/iv_hw_tip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:id="@+id/tv_start"
+            style="@style/text_white"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="42px"
+            android:background="@drawable/button_start_selector" />
+
+        <TextView
+            style="@style/text_mgray"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="32px"
+            android:text="@string/examine_body_tip1" />
+    </RelativeLayout>
+
+    <ViewStub
+        android:id="@+id/vs_hw"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/viewstub_examine_body_hw">
+
+    </ViewStub>
+
+    <ViewStub
+        android:id="@+id/vs_fat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/viewstub_examine_body_fat">
+
+    </ViewStub>
+
+
+</RelativeLayout>

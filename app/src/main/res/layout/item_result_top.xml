@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blue"
+    android:orientation="horizontal"
+    android:paddingBottom="15px"
+    android:paddingTop="15px"
+    android:weightSum="3">
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/text_black"
+        android:layout_width="0px"
+        android:layout_weight="1"
+        android:text="测试项" />
+
+
+    <TextView
+        android:id="@+id/tv_value"
+        style="@style/text_black"
+        android:layout_width="0px"
+        android:layout_marginLeft="40px"
+        android:layout_weight="1"
+        android:text="数值" />
+
+
+    <TextView
+        android:id="@+id/tv_range"
+        style="@style/text_black"
+        android:layout_width="0px"
+        android:layout_marginLeft="40px"
+        android:layout_weight="1"
+        android:text="范围" />
+
+</LinearLayout>

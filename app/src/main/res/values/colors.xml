@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="trans_white60">#96FFFFFF</color>
+    <color name="xblack">#3a3a3a</color>
+    <color name="black">#333333</color>
+    <color name="mblack">#33363c</color>
+    <color name="mmblack">#43464b</color>
+    <color name="gray">#8190a7</color>
+    <color name="basic_gray">#737373</color>
+    <color name="circle_gray">#a7b8d1</color>
+    <color name="xgray">#999999</color>
+    <color name="sgray">#d6d6d6</color>
+    <color name="xxgray">#bdbdbd</color>
+    <color name="mgray">#a7a7a7</color>
+    <color name="mmgray">#dddddd</color>
+    <color name="mmmgray">#f5f5f5</color>
+    <color name="mmmmgray">#f8f8ff</color>
+    <color name="trans">#00000000</color>
+
+    <color name="nav_gray">#b2b2b2</color>
+    <color name="nav_green">#00b99e</color>
+    <color name="mblue">#95c9ee</color>
+    <color name="blue">#14b4ff</color>
+    <color name="xblue">#6a89ed</color>
+    <color name="pink">#ef76e8</color>
+    <color name="red">#ff6041</color>
+
+
+    <color name="bh_normal">#8693f3</color>
+    <color name="bh_mid">#bc8dee</color>
+    <color name="bh_low_high">#ffa897</color>
+    <color name="button_color">#737FDA</color>
+
+    <color name="scan_succ">#19af8f</color>
+    <color name="scaning">#118ae2</color>
+    <color name="scan_fail">#fc4a35</color>
+
+
+    <drawable name="nav_green">#00b99e</drawable>
+    <drawable name="nav_trans">#00000000</drawable>
+
+    <color name="good_green">#00b99e</color>
+    <color name="orange">#ff5000</color>
+    <color name="good_green_trans">#4000b99e</color>
+
+    <color name="step_unfinish">#33363c</color>
+    <color name="step_finish">#00c2ff</color>
+    <color name="step_select">#00c3ff</color>
+
+    <color name="temp_nomal">#08a99b</color>
+    <color name="temp_high1">#d5b324</color>
+    <color name="temp_high2">#ff8900</color>
+    <color name="temp_high3">#df0000</color>
+
+    <color name="temp_nomal_bg">#e6f8f5</color>
+    <color name="temp_high1_bg">#eff0d9</color>
+    <color name="temp_high2_bg">#ffe9cc</color>
+    <color name="temp_high3_bg">#f9cccc</color>
+
+    <color name="temp_nomal_txt">#b8e7e1</color>
+    <color name="temp_high1_txt">#e8dc9d</color>
+    <color name="temp_high2_txt">#f5cfa5</color>
+    <color name="temp_high3_txt">#f7a49e</color>
+
+
+    <color name="nomal">#00b99e</color>
+    <color name="low">#007bff</color>
+    <color name="high">#ff4102</color>
+
+
+    <color name="checking">#4cbbef</color>
+</resources>

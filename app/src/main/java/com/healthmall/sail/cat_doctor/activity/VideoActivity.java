@@ -109,7 +109,8 @@ public class VideoActivity extends BaseActivity<VideoDelegate> {
 
         SerialPortCmd.scanSucc();
 
-        if (MyApplication.get().getCurrUser().isAuthentication() || !TextUtils.isEmpty(MyApplication.get().getCurrUser().getBirthday())) {
+        if (MyApplication.get().getCurrUser().getMemberAge() != null
+                && MyApplication.get().getCurrUser().getMemberSex() != null) {
             startActivity(TipActivity.class, true);
         } else {
             startActivity(InfoActivity.class, true);

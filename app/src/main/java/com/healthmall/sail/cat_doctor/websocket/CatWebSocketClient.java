@@ -35,7 +35,7 @@ public class CatWebSocketClient extends WebSocketClient {
     //  public static final String uri = "ws://dev-accwssail.healthmall.cn/server/bodyAnaylzer/data";
 //    public static final String uri = "ws://accwssail.healthmall.cn/server/bodyAnaylzer/data";
 
-    public static final String uri = "wss://panda.xiliangmen.com:9094";
+    public static final String uri = "wss://panda.xiliangmen.com:9095/pandaAndroid";
 
     static CatWebSocketClient instance;
 
@@ -93,7 +93,7 @@ public class CatWebSocketClient extends WebSocketClient {
             public void call(Long aLong) {
                 //发送心跳包
                 MLog.log("---发送心跳包---");
-                instance.sendPing();
+                instance.send(CmdUtils.getPing());
             }
         }, new Action1<Throwable>() {
             @Override

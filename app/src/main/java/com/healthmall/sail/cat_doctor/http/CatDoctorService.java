@@ -36,23 +36,23 @@ public interface CatDoctorService {
     @POST("doctorMall/report/sanCode")
     Observable<CDRespone<Object>> scanCode(@Body RequestBody json);
 
-    @POST("doctorMall/report/body")
-    Observable<CDRespone<BodyRespone>> bodyReport(@Body RequestBody json);
+    @POST("android/data/api/uploadData/body")
+    Observable<CDRespone<Object>> bodyReport(@Body RequestBody json);
 
-    @POST("doctorMall/report/temperature")
+    @POST("android/data/api/uploadData/temperature")
     Observable<CDRespone<BodyRespone>> temperatureReport(@Body RequestBody json);
 
-    @POST("doctorMall/report/bloodOxygen")
+    @POST("android/data/api/uploadData/bloodOxygen")
     Observable<CDRespone<Object>> bloodOxygenReport(@Body RequestBody json);
 
-    @POST("doctorMall/report/bloodPressure")
+    @POST("android/data/api/uploadData/bloodPressure")
     Observable<CDRespone<Object>> bloodPressureReport(@Body RequestBody json);
 
     @Multipart
     @POST("doctorMall/report/testUpload")
     Observable<CDRespone<Object>> faceTonUpload(@PartMap Map<String, RequestBody> params);
 
-    @POST("sail/deviceManager/bind")
+    @POST("android/data/api/check/checkDeviceIsRegistered")
     Observable<CDRespone> bindDevice(@Body RequestBody json);
 
     @POST("sail/question/answer")
@@ -64,8 +64,8 @@ public interface CatDoctorService {
     @POST("sail/question/result")
     Observable<CDRespone<QuestionReport>> questionResult(@Query("accessToken") String accessToken, @Body RequestBody json);
 
-    @POST("doctorMall/report/saveUserInfo")
-    Observable<CDRespone<Object>> saveUserInfo(@Query("accessToken") String accessToken, @Body RequestBody json);
+    @POST("android/data/api/information/updateInformation")
+    Observable<CDRespone<Object>> saveUserInfo( @Body RequestBody json);
 
     @POST("doctorMall/report/quit")
     Observable<CDRespone<Object>> quit(@Query("accessToken") String accessToken, @Body RequestBody json);

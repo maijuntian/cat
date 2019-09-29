@@ -34,4 +34,15 @@ public class CmdUtils {
 
         return jsonObject.toString();
     }
+
+    public static String getPing(){
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("message", "ping");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return jsonObject.toString();
+    }
 }

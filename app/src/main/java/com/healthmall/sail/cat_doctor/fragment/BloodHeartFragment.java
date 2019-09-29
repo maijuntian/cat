@@ -17,6 +17,7 @@ import com.healthmall.sail.cat_doctor.http.CatDoctorApi;
 import com.healthmall.sail.cat_doctor.serialport.SerialPortCmd;
 import com.mai.xmai_fast_lib.utils.MLog;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import butterknife.OnClick;
@@ -65,6 +66,13 @@ public class BloodHeartFragment extends BaseFragment<BloodHeartDelegate> {
     private void startExamine() {
 
         viewDelegate.showStep1();
+
+       /* new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                serialPortCallBack("OK+BLOODPRS+SP=100+DP=80+HR=90");
+            }
+        }, 2000);*/
     }
 
     @Override
@@ -132,12 +140,12 @@ public class BloodHeartFragment extends BaseFragment<BloodHeartDelegate> {
 
             SerialPortCmd.stopBloodOPRS();
 
-          /*  CatDoctorApi.getInstance().bloodPressureReport(currBloodPressureReport, getActivity()).subscribe(new Action1<Object>() {
+            CatDoctorApi.getInstance().bloodPressureReport(currBloodPressureReport, getActivity()).subscribe(new Action1<Object>() {
                 @Override
                 public void call(Object o) {
                     MLog.log("上传完成");
                 }
-            }, new MyThrowable());*/
+            }, new MyThrowable());
         }
     }
 

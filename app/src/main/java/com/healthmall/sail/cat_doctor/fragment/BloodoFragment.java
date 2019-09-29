@@ -72,7 +72,7 @@ public class BloodoFragment extends BaseFragment<BloodoDelegate> {
         return 60000;
     }
 
-    /* int times;
+     /*int times;
 
     Handler handler = new Handler() {
         @Override
@@ -94,8 +94,8 @@ public class BloodoFragment extends BaseFragment<BloodoDelegate> {
         viewDelegate.showStep2();
         SerialPortCmd.bloodOX();
 
-       /* times = 0;
-        handler.sendEmptyMessageDelayed(0, 10000);*/
+//        times = 0;
+//        handler.sendEmptyMessageDelayed(0, 10000);
     }
 
     @Override
@@ -147,7 +147,7 @@ public class BloodoFragment extends BaseFragment<BloodoDelegate> {
             viewDelegate.showStep3(currBloodOxygenReport);
             ((ExamineActivity) getActivity()).notifyMenu();
 
-           /* CatDoctorApi.getInstance().bloodOxygenReport(currBloodOxygenReport, getActivity()).subscribe(new Action1<Object>() {
+            CatDoctorApi.getInstance().bloodOxygenReport(currBloodOxygenReport, getActivity()).subscribe(new Action1<Object>() {
                 @Override
                 public void call(Object o) {
 
@@ -157,7 +157,7 @@ public class BloodoFragment extends BaseFragment<BloodoDelegate> {
                 public void call(Throwable throwable) {
                     throwable.printStackTrace();
                 }
-            });*/
+            });
         }
     }
 

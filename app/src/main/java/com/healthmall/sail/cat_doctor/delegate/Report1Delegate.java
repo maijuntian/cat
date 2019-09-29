@@ -648,9 +648,11 @@ public class Report1Delegate extends BaseDelegate {
             }
 
             private void initQuestion(BaseViewHolder viewHolder) {
-                QuestionReport questionReport = report.getQuestionReport();
-                viewHolder.setText(R.id.tv_result, questionReport.getQuestionResultNameReal())
-                        .setBackgroundDrawable(R.id.rl_result_bg, ContextCompat.getDrawable(mContext, questionReport.getQuestionResultBg()));
+                if(report.getQuestionReport().isFinish()) {
+                    QuestionReport questionReport = report.getQuestionReport();
+                    viewHolder.setText(R.id.tv_result, questionReport.getQuestionResultNameReal())
+                            .setBackgroundDrawable(R.id.rl_result_bg, ContextCompat.getDrawable(mContext, questionReport.getQuestionResultBg()));
+                }
             }
         };
 

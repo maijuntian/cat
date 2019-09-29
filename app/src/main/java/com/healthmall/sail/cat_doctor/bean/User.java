@@ -20,14 +20,14 @@ public class User {
     private String accessToken;
     private String questionAnswerId;
     private String questionResultName;
-    private String birthday;
+    private Integer memberAge;
     private boolean authentication;
     private boolean talent;
     private boolean isUsed;
 
     private boolean isVoice;
 
-    public User(String mallId, String memberName, Integer memberSex, String memHeadImg, String accessToken, String questionAnswerId, String questionResultName, String birthday) {
+    public User(String mallId, String memberName, Integer memberSex, String memHeadImg, String accessToken, String questionAnswerId, String questionResultName, int age) {
         this.mallId = mallId;
         this.memberName = memberName;
         this.memberSex = memberSex;
@@ -35,7 +35,7 @@ public class User {
         this.accessToken = accessToken;
         this.questionAnswerId = questionAnswerId;
         this.questionResultName = questionResultName;
-        this.birthday = birthday;
+        this.memberAge = age;
     }
 
     public String getAccessToken() {
@@ -87,14 +87,12 @@ public class User {
     }
 
     public Integer getMemberAge() {
-        if (TextUtils.isEmpty(birthday))
-            return 10;
-        int year = Integer.parseInt(birthday.split("-")[0]);
-        int age = Calendar.getInstance().get(Calendar.YEAR) - year;
-        MLog.log("年龄-->" + age);
-        return age;
+        return memberAge;
     }
 
+    public void setMemberAge(Integer memberAge) {
+        this.memberAge = memberAge;
+    }
 
     public boolean isAuthentication() {
         return authentication;
@@ -128,12 +126,11 @@ public class User {
         isUsed = used;
     }
 
-    public String getBirthday() {
-        return birthday;
-    }
 
     public void setBirthday(String birthday) {
-        this.birthday = birthday;
+
+        int year = Integer.parseInt(birthday.split("-")[0]);
+        this.memberAge = Calendar.getInstance().get(Calendar.YEAR) - year;
     }
 
     public boolean isVoice() {

@@ -6,10 +6,15 @@ import android.widget.ImageView;
 import com.healthmall.sail.cat_doctor.Constant;
 import com.healthmall.sail.cat_doctor.R;
 import com.healthmall.sail.cat_doctor.base.BaseDelegate;
+import com.healthmall.sail.cat_doctor.utils.AesEncryptUtil;
 import com.healthmall.sail.cat_doctor.utils.Configs;
 import com.healthmall.sail.cat_doctor.utils.Keys;
 import com.healthmall.sail.cat_doctor.utils.QrCodeUtils;
+import com.mai.xmai_fast_lib.basehttp.MParams;
 import com.mai.xmai_fast_lib.utils.SharedPreferencesHelper;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import butterknife.Bind;
 
@@ -34,15 +39,24 @@ public class IndexDelegate extends BaseDelegate {
     public void initWidget() {
         super.initWidget();
 
-        if(Configs.isTaiYangShen){
+        if (Configs.isTaiYangShen) {
             ivLogo.setImageResource(R.mipmap.index_taiyangshen_logo);
         }
     }
 
     public void initQrCode() {
         String deviceId = SharedPreferencesHelper.getInstance(mContext.getApplicationContext()).getStringValue(Keys.KEY_DEVICE_ID);
+
         if (!TextUtils.isEmpty(deviceId)) {
-            ivQrcode.setImageBitmap(QrCodeUtils.createImage(Constant.DEVICE_QR_CODE_URL_PRE + deviceId, 200, 200));
+            JSONObject jsonObject = new JSONObject();
+            try {
+                jsonObject.put("type", "unlock");
+                jsonObject.put("deviceNum", deviceId);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            ivQrcode.setImageBitmap(QrCodeUtils.createImage(AesEncryptUtil.encrypt(jsonObject.toString()), 200, 200));
         }
     }
 

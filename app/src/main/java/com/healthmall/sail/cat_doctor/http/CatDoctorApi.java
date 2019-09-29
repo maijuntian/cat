@@ -42,7 +42,7 @@ import rx.schedulers.Schedulers;
 /**
  * Created by mai on 2017/11/20.
  */
-public class CatDoctorApi extends BaseRetrofitService<CatDoctorService> {
+public class CatDoctorApi extends BaseRetrofitService2<CatDoctorService> {
 
     static CatDoctorApi instance;
     private LoadingDialog dialog;
@@ -62,7 +62,7 @@ public class CatDoctorApi extends BaseRetrofitService<CatDoctorService> {
 
     @Override
     protected String getBaseUrl() {
-        return "http://apisail.healthmall.cn/api/";
+        return "https://panda.xiliangmen.com/";
 //        return "http://dev-apisail.healthmall.cn/api/";
     }
 
@@ -122,7 +122,7 @@ public class CatDoctorApi extends BaseRetrofitService<CatDoctorService> {
             @Override
             public M call(CDRespone<M> response) {
                 MLog.log("访问结果", response.toString());
-                if (response.getCode() != 2000) {
+                if (response.getCode() != 200) {
                     ServerException serverException = new ServerException(response.getMsg());
                     serverException.setCode(response.getCode());
                     throw serverException;
@@ -157,20 +157,25 @@ public class CatDoctorApi extends BaseRetrofitService<CatDoctorService> {
 
 
     public Observable<CDRespone> bindDevice(String deviceId, Context ctx) {
-        return checkNoResult(mService.bindDevice(new MParams().add("deviceId", deviceId).getJsonRequestBody()), ctx);
+        return checkNoResult(mService.bindDevice(new MParams().add("deviceNum", deviceId).getJsonRequestBody()), ctx);
     }
 
-    public Observable<BodyRespone> bodyReport(BodyReport bodyReport, Context ctx) {
+    public Observable<BodyRespone> bodyReport(final BodyReport bodyReport, Context ctx) {
         bodyReport.setSex(MyApplication.get().getCurrUser().getMemberSex());
         bodyReport.setAge(MyApplication.get().getCurrUser().getMemberAge());
-        BodyRespone bodyRespone = new BodyRespone(MyApplication.get().getCurrUser().getMemberSex(), MyApplication.get().getCurrUser().getMemberAge());
-        bodyRespone.setLowerLimbBalance(Float.parseFloat(bodyReport.getBm_bf_llmm()), Float.parseFloat(bodyReport.getBm_bf_rlmm()));
-        bodyRespone.setWaistToHipRatioResult(MyApplication.get().getCurrUser().getMemberSex(),Float.parseFloat(bodyReport.getBm_bf_wthr()));
-        bodyRespone.setUpperLimbBalance(Float.parseFloat(bodyReport.getBm_bf_lhmm()), Float.parseFloat(bodyReport.getBm_bf_rhmm()));
-        bodyRespone.setUpperLimbDeveloped(Float.parseFloat(bodyReport.getBm_bf_lhmm()), Float.parseFloat(bodyReport.getBm_bf_rhmm()));
-        bodyRespone.setLowerLimbDeveloped(Float.parseFloat(bodyReport.getBm_bf_llmm()), Float.parseFloat(bodyReport.getBm_bf_rlmm()));
-        return Observable.just(bodyRespone);
-//        return checkNoDialog(mService.bodyReport(new MParams().getJsonRequestBody(bodyReport)), ctx);
+
+        return checkNoDialog(mService.bodyReport(new MParams().getJsonRequestBody(bodyReport)), ctx).flatMap(new Func1<Object, Observable<BodyRespone>>() {
+            @Override
+            public Observable<BodyRespone> call(Object o) {
+                BodyRespone bodyRespone = new BodyRespone(MyApplication.get().getCurrUser().getMemberSex(), MyApplication.get().getCurrUser().getMemberAge());
+                bodyRespone.setLowerLimbBalance(Float.parseFloat(bodyReport.getBm_bf_llmm()), Float.parseFloat(bodyReport.getBm_bf_rlmm()));
+                bodyRespone.setWaistToHipRatioResult(MyApplication.get().getCurrUser().getMemberSex(),Float.parseFloat(bodyReport.getBm_bf_wthr()));
+                bodyRespone.setUpperLimbBalance(Float.parseFloat(bodyReport.getBm_bf_lhmm()), Float.parseFloat(bodyReport.getBm_bf_rhmm()));
+                bodyRespone.setUpperLimbDeveloped(Float.parseFloat(bodyReport.getBm_bf_lhmm()), Float.parseFloat(bodyReport.getBm_bf_rhmm()));
+                bodyRespone.setLowerLimbDeveloped(Float.parseFloat(bodyReport.getBm_bf_llmm()), Float.parseFloat(bodyReport.getBm_bf_rlmm()));
+                return Observable.just(bodyRespone);
+            }
+        });
     }
 
     public Observable<BodyRespone> temperatureReport(TemperatureReport temperatureReport, Context ctx) {
@@ -203,7 +208,6 @@ public class CatDoctorApi extends BaseRetrofitService<CatDoctorService> {
         }).flatMap(new Func1<File, Observable<CDRespone<Object>>>() {
             @Override
             public Observable<CDRespone<Object>> call(File file) {
-
                 return mService.faceTonUpload(new MParams().add("img", file).add("pwd", "9daef6de79902510dbd1f7702b179d0d").add("testType", testType).add("source", 0).add("deviceId", deviceId).add("mallId", MyApplication.get().getCurrUser().getMallId()).setLoadListener(listener).getFileListenerParams());
             }
         }), ctx);
@@ -242,7 +246,7 @@ public class CatDoctorApi extends BaseRetrofitService<CatDoctorService> {
     }
 
     public Observable<Object> saveUserInfo(MParams params, Context ctx) {
-        return checkAll2(mService.saveUserInfo(MyApplication.get().getCurrUser().getAccessToken(), params.getJsonRequestBody()), ctx);
+        return checkAll2(mService.saveUserInfo(params.getJsonRequestBody()), ctx);
     }
 
     public Observable<Object> quit(MParams params, Context ctx) {

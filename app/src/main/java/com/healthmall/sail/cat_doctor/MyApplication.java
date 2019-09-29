@@ -63,7 +63,7 @@ public class MyApplication extends BaseApplication {
 
         new ReaderUtils().openDevice(getApplicationContext());
 
-        upgrade();
+//        upgrade();
     }
 
     private void upgrade() {
@@ -142,7 +142,7 @@ public class MyApplication extends BaseApplication {
         });
     }
 
-    public void  lock(User user) {
+    public void lock(User user) {
 
         //退出用户，关锁
 
@@ -189,7 +189,6 @@ public class MyApplication extends BaseApplication {
      */
     public void logout() {
         String deviceId = SharedPreferencesHelper.getInstance(getApplicationContext()).getStringValue(Keys.KEY_DEVICE_ID);
-
         CatDoctorApi.getInstance().quit(new MParams().add("deviceId", deviceId), getApplicationContext()).subscribe(new Action1<Object>() {
             @Override
             public void call(Object o) {

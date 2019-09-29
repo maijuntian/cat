@@ -196,6 +196,7 @@ public class QuestionReport {
     }*/
 
     public boolean isFinish() {
+//        return false;
         return !TextUtils.isEmpty(questionAnswerId);
     }
 

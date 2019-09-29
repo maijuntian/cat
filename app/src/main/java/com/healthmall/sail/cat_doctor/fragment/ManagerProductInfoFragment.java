@@ -47,10 +47,10 @@ public class ManagerProductInfoFragment extends BaseFragment<ManagerProductInfoD
 
         final String deviceIdF = Constant.DEVICE_ID_PRE + deviceId;
 
-     /*   CatDoctorApi.getInstance().bindDevice(deviceIdF, getActivity()).subscribe(new Action1<CDRespone>() {
+        CatDoctorApi.getInstance().bindDevice(deviceIdF, getActivity()).subscribe(new Action1<CDRespone>() {
             @Override
             public void call(CDRespone cdRespone) {
-                if (cdRespone.getCode() == 2000) {
+                if (cdRespone.getCode() == 200) {
                     SharedPreferencesHelper.getInstance(getContext()).putStringValue(Keys.KEY_DEVICE_ID, deviceIdF);
 
                     CatWebSocketClient.getInstance().connect();
@@ -65,14 +65,8 @@ public class ManagerProductInfoFragment extends BaseFragment<ManagerProductInfoD
             public void call(Throwable throwable) {
                 throwable.printStackTrace();
             }
-        });*/
+        });
 
 
-
-        SharedPreferencesHelper.getInstance(getContext()).putStringValue(Keys.KEY_DEVICE_ID, deviceIdF);
-
-        CatWebSocketClient.getInstance().connect();
-
-        viewDelegate.initDeviceId();
     }
 }

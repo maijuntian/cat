@@ -25,22 +25,21 @@ public class InfoActivity extends BaseSoftActivity<InfoDelegate> {
 
         final int sex = viewDelegate.rbMan.isChecked() ? 1 : 0;
 
-       /* CatDoctorApi.getInstance().saveUserInfo(new MParams()
+        MyApplication.get().getCurrUser().setBirthday(year + "-" + month + "-" + day);
+        MyApplication.get().getCurrUser().setMemberSex(sex);
+        CatDoctorApi.getInstance().saveUserInfo(new MParams()
                 .add("sex", sex)
-                .add("interfaceVer", 1)
-                .add("birthday", year + "-" + month + "-" + day), this)
+                .add("age", MyApplication.get().getCurrUser().getMemberAge()), this)
                 .subscribe(new Action1<Object>() {
                     @Override
                     public void call(Object o) {
-                        MyApplication.get().getCurrUser().setBirthday(year + "-" + month + "-" + day);
-                        MyApplication.get().getCurrUser().setMemberSex(sex);
                         startActivity(TipActivity.class, true);
                     }
-                }, new MyThrowable());*/
+                }, new MyThrowable());
 
-        MyApplication.get().getCurrUser().setBirthday(year + "-" + month + "-" + day);
-        MyApplication.get().getCurrUser().setMemberSex(sex);
-        startActivity(TipActivity.class, true);
+//        MyApplication.get().getCurrUser().setBirthday(year + "-" + month + "-" + day);
+//        MyApplication.get().getCurrUser().setMemberSex(sex);
+//        startActivity(TipActivity.class, true);
     }
 
     @OnClick(R.id.rl_birthday)

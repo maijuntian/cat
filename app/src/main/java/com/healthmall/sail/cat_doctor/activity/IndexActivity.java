@@ -54,7 +54,8 @@ public class IndexActivity extends BaseActivity<IndexDelegate> {
         SerialPortCmd.scanSucc();
 
         if (!isPause) {
-            if (MyApplication.get().getCurrUser().isAuthentication() || !TextUtils.isEmpty(MyApplication.get().getCurrUser().getBirthday())) {
+            if (MyApplication.get().getCurrUser().getMemberAge() != null
+                    && MyApplication.get().getCurrUser().getMemberSex() != null) {
                 startActivity(TipActivity.class, false);
             } else {
                 startActivity(InfoActivity.class, false);

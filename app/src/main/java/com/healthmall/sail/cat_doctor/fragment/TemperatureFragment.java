@@ -119,7 +119,7 @@ public class TemperatureFragment extends BaseFragment<TemperatureDelegate> {
             viewDelegate.showStep3(currTemperatureReport);
             ((ExamineActivity) getActivity()).notifyMenu();
 
-          /*  CatDoctorApi.getInstance().temperatureReport(currTemperatureReport, getActivity()).subscribe(new Action1<Object>() {
+            CatDoctorApi.getInstance().temperatureReport(currTemperatureReport, getActivity()).subscribe(new Action1<Object>() {
                 @Override
                 public void call(Object o) {
 
@@ -129,7 +129,7 @@ public class TemperatureFragment extends BaseFragment<TemperatureDelegate> {
                 public void call(Throwable throwable) {
                     throwable.printStackTrace();
                 }
-            });*/
+            });
         }
 
     }

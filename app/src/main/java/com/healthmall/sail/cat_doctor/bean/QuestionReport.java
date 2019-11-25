@@ -109,10 +109,11 @@ public class QuestionReport {
     }
 
     public String getDescription() {
-        if (descriptionList != null && descriptionList.size() > 0) {
-            return "";
-        }
-        return descriptionList.get(0);
+//        if (descriptionList != null && descriptionList.size() > 0) {
+//            return "";
+//        }
+//        return descriptionList.get(0);
+        return "";
     }
 
     public void setDescriptionList(List<String> descriptionList) {
@@ -197,7 +198,7 @@ public class QuestionReport {
 
     public boolean isFinish() {
 //        return false;
-        return !TextUtils.isEmpty(questionAnswerId);
+        return !TextUtils.isEmpty(questionResultName);
     }
 
 }

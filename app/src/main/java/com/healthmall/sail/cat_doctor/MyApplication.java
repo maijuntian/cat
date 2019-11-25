@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import com.healthmall.sail.cat_doctor.activity.IndexActivity;
 import com.healthmall.sail.cat_doctor.base.BaseActivity;
 import com.healthmall.sail.cat_doctor.base.BaseSoftActivity;
+import com.healthmall.sail.cat_doctor.bean.Physical;
 import com.healthmall.sail.cat_doctor.bean.User;
 import com.healthmall.sail.cat_doctor.bean.UserReport;
 import com.healthmall.sail.cat_doctor.http.CatDoctorApi;
@@ -25,8 +26,10 @@ import com.mai.xmai_fast_lib.utils.XAppManager;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import android_serialport_api.SerialPort;
+import rx.Observable;
 import rx.functions.Action1;
 
 /**
@@ -131,8 +134,27 @@ public class MyApplication extends BaseApplication {
 
         currUser = user;
         currUserReport = new UserReport();
-        currUserReport.getQuestionReport().setQuestionAnswerId(user.getQuestionAnswerId());
-        currUserReport.getQuestionReport().setQuestionResultName(user.getQuestionResultName());
+        if (!TextUtils.isEmpty(user.getIsFcImg()) && !TextUtils.isEmpty(user.getIsTgImg())) {
+            currUserReport.getFaceTonReport().setFinishFace(true);
+            currUserReport.getFaceTonReport().setFinishTon(true);
+            currUserReport.getFaceTonReport().setFaceUrl(user.getIsFcImg());
+            currUserReport.getFaceTonReport().setTonUrl(user.getIsTgImg());
+        }
+        if (user.getIsPhysical() != null && user.getIsPhysical().size() > 0) {
+            Physical maxPhysical = null;
+            for (Physical physical : user.getIsPhysical()) {
+                if (!"平和质".equals(physical.getType()) && physical.getScore() >= 30) {
+                    if (maxPhysical == null || physical.getScore() > maxPhysical.getScore())
+                        maxPhysical = physical;
+                }
+            }
+            if(maxPhysical != null){
+                currUserReport.getQuestionReport().setQuestionResultName(maxPhysical.getType());
+            } else {
+                currUserReport.getQuestionReport().setQuestionResultName("平和质");
+            }
+
+        }
 
         XAppManager.getInstance().doInAllActivity(new XAppManager.DoAllActivityListener() {
             @Override
@@ -188,11 +210,9 @@ public class MyApplication extends BaseApplication {
      * 退出登录
      */
     public void logout() {
-        String deviceId = SharedPreferencesHelper.getInstance(getApplicationContext()).getStringValue(Keys.KEY_DEVICE_ID);
-        CatDoctorApi.getInstance().quit(new MParams().add("deviceId", deviceId), getApplicationContext()).subscribe(new Action1<Object>() {
+        CatDoctorApi.getInstance().quit(getApplicationContext()).subscribe(new Action1<Object>() {
             @Override
             public void call(Object o) {
-
             }
         }, new Action1<Throwable>() {
             @Override
@@ -201,9 +221,19 @@ public class MyApplication extends BaseApplication {
             }
         });
 
-        currUser = null;
 
-        currUserReport = null;
+        Observable.timer(500, TimeUnit.MILLISECONDS).subscribe(new Action1<Long>() {
+            @Override
+            public void call(Long aLong) {
+                currUser = null;
+                currUserReport = null;
+            }
+        }, new Action1<Throwable>() {
+            @Override
+            public void call(Throwable throwable) {
+                throwable.printStackTrace();
+            }
+        });
 
         SerialPortCmd.stopAsr();
     }

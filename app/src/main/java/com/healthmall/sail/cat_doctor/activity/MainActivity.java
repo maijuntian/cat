@@ -4,8 +4,8 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.widget.CompoundButton;
 
-import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler;
 import com.healthmall.sail.cat_doctor.MyApplication;
+
 import com.healthmall.sail.cat_doctor.R;
 import com.healthmall.sail.cat_doctor.base.BaseActivity;
 import com.healthmall.sail.cat_doctor.base.BaseExamineActivity;

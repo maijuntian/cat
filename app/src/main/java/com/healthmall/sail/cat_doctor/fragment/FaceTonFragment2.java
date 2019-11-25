@@ -17,7 +17,12 @@ import com.mai.xmai_fast_lib.basehttp.UploadListener;
 import com.wonderkiln.camerakit.CameraKitEventCallback;
 import com.wonderkiln.camerakit.CameraKitImage;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import butterknife.OnClick;
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
 import rx.functions.Action1;
 
 /**
@@ -138,6 +143,31 @@ public class FaceTonFragment2 extends BaseFragment<FaceTonDelegate2> {
         SerialPortCmdSmall.parseFaceTonReport(msg, currFaceTonReport);
         viewDelegate.showSaveTonSucc(false, currFaceTonReport);
         ((ExamineActivity) getActivity()).notifyMenu();
+
+        if(currFaceTonReport.isFinish()) {
+            try {
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("tongueImg", currFaceTonReport.getTonUrl());
+                jsonObject.put("faceImg", currFaceTonReport.getFaceUrl());
+
+                JSONObject params = new JSONObject();
+                params.put("img", jsonObject);
+                CatDoctorApi.getInstance().uploadImgInfo(RequestBody.create(MediaType.parse("application/json"), params.toString()), getActivity())
+                        .subscribe(new Action1<Object>() {
+                            @Override
+                            public void call(Object o) {
+                                log("上传成功...");
+                            }
+                        }, new Action1<Throwable>() {
+                            @Override
+                            public void call(Throwable throwable) {
+                                throwable.printStackTrace();
+                            }
+                        });
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @Override

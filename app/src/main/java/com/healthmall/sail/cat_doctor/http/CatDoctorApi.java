@@ -32,6 +32,9 @@ import com.mai.xmai_fast_lib.utils.SharedPreferencesHelper;
 import java.io.File;
 import java.util.List;
 
+import okhttp3.RequestBody;
+import retrofit2.http.Body;
+import retrofit2.http.POST;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action0;
@@ -169,7 +172,7 @@ public class CatDoctorApi extends BaseRetrofitService2<CatDoctorService> {
             public Observable<BodyRespone> call(Object o) {
                 BodyRespone bodyRespone = new BodyRespone(MyApplication.get().getCurrUser().getMemberSex(), MyApplication.get().getCurrUser().getMemberAge());
                 bodyRespone.setLowerLimbBalance(Float.parseFloat(bodyReport.getBm_bf_llmm()), Float.parseFloat(bodyReport.getBm_bf_rlmm()));
-                bodyRespone.setWaistToHipRatioResult(MyApplication.get().getCurrUser().getMemberSex(),Float.parseFloat(bodyReport.getBm_bf_wthr()));
+                bodyRespone.setWaistToHipRatioResult(MyApplication.get().getCurrUser().getMemberSex(), Float.parseFloat(bodyReport.getBm_bf_wthr()));
                 bodyRespone.setUpperLimbBalance(Float.parseFloat(bodyReport.getBm_bf_lhmm()), Float.parseFloat(bodyReport.getBm_bf_rhmm()));
                 bodyRespone.setUpperLimbDeveloped(Float.parseFloat(bodyReport.getBm_bf_lhmm()), Float.parseFloat(bodyReport.getBm_bf_rhmm()));
                 bodyRespone.setLowerLimbDeveloped(Float.parseFloat(bodyReport.getBm_bf_llmm()), Float.parseFloat(bodyReport.getBm_bf_rlmm()));
@@ -249,9 +252,8 @@ public class CatDoctorApi extends BaseRetrofitService2<CatDoctorService> {
         return checkAll2(mService.saveUserInfo(params.getJsonRequestBody()), ctx);
     }
 
-    public Observable<Object> quit(MParams params, Context ctx) {
-        MLog.log("" + (MyApplication.get().getCurrUser() == null));
-        return checkNoDialog(mService.quit(MyApplication.get().getCurrUser().getAccessToken(), params.getJsonRequestBody()), ctx);
+    public Observable<Object> quit(Context ctx) {
+        return checkNoDialog(mService.quit(), ctx);
     }
 
     public Observable<Version> getNewVersion(MParams params, Context ctx) {
@@ -264,5 +266,13 @@ public class CatDoctorApi extends BaseRetrofitService2<CatDoctorService> {
 
     public Observable<List<Symptom>> getSymptom(Context ctx) {
         return checkNoDialog(mService.getSymptom(MyApplication.get().getCurrUser().getAccessToken()), ctx);
+    }
+
+    public Observable<Object> physicalResult(RequestBody mParams, Context ctx) {
+        return checkNoDialog(mService.physicalResult(mParams), ctx);
+    }
+
+    public Observable<Object> uploadImgInfo(RequestBody mParams, Context ctx) {
+        return checkNoDialog(mService.uploadImgInfo(mParams), ctx);
     }
 }

@@ -3,6 +3,7 @@ package com.healthmall.sail.cat_doctor.activity;
 import android.os.Bundle;
 import android.text.TextUtils;
 
+import com.google.gson.Gson;
 import com.healthmall.sail.cat_doctor.MyApplication;
 import com.healthmall.sail.cat_doctor.R;
 import com.healthmall.sail.cat_doctor.base.BaseActivity;
@@ -54,6 +55,8 @@ public class IndexActivity extends BaseActivity<IndexDelegate> {
         SerialPortCmd.scanSucc();
 
         if (!isPause) {
+            log("MyApplication.get().getCurrUser().getMemberAge()==>" + MyApplication.get().getCurrUser().getMemberAge());
+            log("MyApplication.get().getCurrUser().getMemberSex()==>" + MyApplication.get().getCurrUser().getMemberSex());
             if (MyApplication.get().getCurrUser().getMemberAge() != null
                     && MyApplication.get().getCurrUser().getMemberSex() != null) {
                 startActivity(TipActivity.class, false);
@@ -63,7 +66,6 @@ public class IndexActivity extends BaseActivity<IndexDelegate> {
         }
     }
 
-/*
     @OnClick(R.id.rl_root)
     public void rl_rootClick(){
 //        private String mallId;
@@ -77,10 +79,11 @@ public class IndexActivity extends BaseActivity<IndexDelegate> {
 //        private boolean authentication;
 //        private boolean talent;
 //        private boolean isUsed;
-        User user = new User("test", "测试用户", 0, "", "testtoken", "answerId", "平和质", "");
-        MyApplication.get().loginSucc(user);
+//        User user = new User("test", "测试用户", 0, "", "testtoken", "answerId", "", 20);
+//        MyApplication.get().loginSucc(user);
+
+//        MyApplication.get().loginSucc(new Gson().fromJson("{\"isPhysical\":[{\"type\":\"气虚质\",\"score\":59,\"rank\":1},{\"type\":\"痰湿质\",\"score\":65,\"rank\":1},{\"type\":\"阳虚质\",\"score\":50,\"rank\":1},{\"type\":\"特禀质\",\"score\":64,\"rank\":1},{\"type\":\"阴虚质\",\"score\":50,\"rank\":1}],\"memberAge\":18,\"isFcImg\":\"https://panda-1257270219.cos.ap-guangzhou.myqcloud.com/wxuser-1/wxf6b91ba0966277bd.o6zAJs0Y7qMlYcOF7fTkmchaCqK4.z5gIhzaZA1tG754336c35612032f06385abb48fa0a4a.png\",\"memberName\":\"朱耘籍的爸爸\",\"memHeadImg\":\"https://wx.qlogo.cn/mmopen/vi_32/PHlRqre8XRS8qEFThHR4JCLeVxOtaS2p9GpPZ2UpODOguL5QiaReLxiaQsdoOSUlMTZ6QJ0f3MeEjpibibYfWBZyew/132\",\"message\":\"unlock\",\"type\":\"1\",\"memberSex\":\"0\",\"isInfo\":true,\"accessToken\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkZXZpY2VOdW0iOiJCQzAwMDAwMSIsImFwcGxldFVzZXJJZCI6IjExODExODU4NDk2MDgzOTI3MTEiLCJleHAiOjE1NzA3ODk5NzEsImNoZWNrSWQiOiIxMTgxNTA4NTA3NjE3MjIyNjg0In0.aPPtQD0duksQ_mivG2T5ZjHTjYzd70dy55vw_MMURvQ\",\"userId\":\"1181185849608392711\",\"isTgImg\":\"https://panda-1257270219.cos.ap-guangzhou.myqcloud.com/wxuser-1/wxf6b91ba0966277bd.o6zAJs0Y7qMlYcOF7fTkmchaCqK4.z5gIhzaZA1tG754336c35612032f06385abb48fa0a4a.png\"}", User.class));
     }
-*/
 
     @Override
     protected void onResume() {

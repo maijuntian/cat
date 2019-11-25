@@ -9,6 +9,7 @@ public class Message {
     String deviceId;
     String ssid;
     String pwd;
+    int userType;
 
     public Message(String type) {
         this.type = type;
@@ -18,6 +19,13 @@ public class Message {
         this.type = type;
         this.mallId = mallId;
         this.deviceId = deviceId;
+    }
+
+    public Message(String type, String deviceId, String mallId, int userType) {
+        this.type = type;
+        this.mallId = mallId;
+        this.deviceId = deviceId;
+        this.userType = userType;
     }
 
 
@@ -60,5 +68,13 @@ public class Message {
 
     public void setPwd(String pwd) {
         this.pwd = pwd;
+    }
+
+    public int getUserType() {
+        return userType;
+    }
+
+    public void setUserType(int userType) {
+        this.userType = userType;
     }
 }

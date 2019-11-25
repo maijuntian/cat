@@ -149,7 +149,7 @@ public class ExamineActivity extends BaseExamineActivity<ExamineDelegate> {
                 }
             });
         } else {*/
-            MyApplication.get().getCurrUserReport().getQuestionReport().setQuestionResultName("平和质");
+//            MyApplication.get().getCurrUserReport().getQuestionReport().setQuestionResultName("平和质");
             startActivity(Report1Activity.class, true);
 //        }
     }

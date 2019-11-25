@@ -22,6 +22,7 @@ import com.healthmall.sail.cat_doctor.fragment.BodyFragment;
 import com.healthmall.sail.cat_doctor.fragment.FaceTonFragment;
 import com.healthmall.sail.cat_doctor.fragment.FaceTonFragment2;
 import com.healthmall.sail.cat_doctor.fragment.QuestionFragment;
+import com.healthmall.sail.cat_doctor.fragment.QuestionFragment2;
 import com.healthmall.sail.cat_doctor.fragment.TemperatureFragment;
 import com.healthmall.sail.cat_doctor.serialport.SerialPortCmd;
 import com.healthmall.sail.cat_doctor.utils.Configs;
@@ -37,7 +38,7 @@ public class ExamineDelegate extends BaseDelegate {
     BloodoFragment bloodoFragment;
     BloodHeartFragment bloodHeartFragment;
     FaceTonFragment2 faceTonFragment;
-    QuestionFragment questionFragment;
+    QuestionFragment2 questionFragment;
 
     BaseFragment currFragment;
 
@@ -364,7 +365,7 @@ public class ExamineDelegate extends BaseDelegate {
             transaction.hide(faceTonFragment);
 
         if (questionFragment == null) {
-            questionFragment = new QuestionFragment();
+            questionFragment = new QuestionFragment2();
             transaction.add(R.id.fl_content, questionFragment);
         } else {
             transaction.show(questionFragment);

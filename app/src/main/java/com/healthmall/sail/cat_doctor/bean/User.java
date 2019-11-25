@@ -7,13 +7,14 @@ import com.healthmall.sail.cat_doctor.R;
 import com.mai.xmai_fast_lib.utils.MLog;
 
 import java.util.Calendar;
+import java.util.List;
 
 /**
  * Created by mai on 2017/11/27.
  */
 public class User {
 
-    private String mallId;
+    private String userId;
     private String memberName;
     private Integer memberSex;
     private String memHeadImg;
@@ -27,8 +28,16 @@ public class User {
 
     private boolean isVoice;
 
+    private List<Physical> isPhysical;
+
+    private String isFcImg;
+
+    private String isTgImg;
+
+    private int type;
+
     public User(String mallId, String memberName, Integer memberSex, String memHeadImg, String accessToken, String questionAnswerId, String questionResultName, int age) {
-        this.mallId = mallId;
+        this.userId = mallId;
         this.memberName = memberName;
         this.memberSex = memberSex;
         this.memHeadImg = memHeadImg;
@@ -55,11 +64,19 @@ public class User {
     }
 
     public String getMallId() {
-        return mallId;
+        return userId;
     }
 
     public void setMallId(String mallId) {
-        this.mallId = mallId;
+        this.userId = mallId;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getMemberName() {
@@ -139,5 +156,37 @@ public class User {
 
     public void setVoice(boolean voice) {
         isVoice = voice;
+    }
+
+    public List<Physical> getIsPhysical() {
+        return isPhysical;
+    }
+
+    public void setIsPhysical(List<Physical> isPhysical) {
+        this.isPhysical = isPhysical;
+    }
+
+    public String getIsFcImg() {
+        return isFcImg;
+    }
+
+    public void setIsFcImg(String isFcImg) {
+        this.isFcImg = isFcImg;
+    }
+
+    public String getIsTgImg() {
+        return isTgImg;
+    }
+
+    public void setIsTgImg(String isTgImg) {
+        this.isTgImg = isTgImg;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 }

@@ -27,17 +27,17 @@ public class SerialPortCmdSmall {
 
 
     public static void face() {
-        Message msg = new Message(FACE, SharedPreferencesHelper.getInstance(MyApplication.get().getApplicationContext()).getStringValue(Keys.KEY_DEVICE_ID), MyApplication.get().getCurrUser().getMallId());
+        Message msg = new Message(FACE, SharedPreferencesHelper.getInstance(MyApplication.get().getApplicationContext()).getStringValue(Keys.KEY_DEVICE_ID), MyApplication.get().getCurrUser().getMallId(), MyApplication.get().getCurrUser().getType());
         SerialPortEngineSmall.getInstance().sendMsg(new Gson().toJson(msg));
     }
 
     public static void ton() {
-        Message msg = new Message(TON, SharedPreferencesHelper.getInstance(MyApplication.get().getApplicationContext()).getStringValue(Keys.KEY_DEVICE_ID), MyApplication.get().getCurrUser().getMallId());
+        Message msg = new Message(TON, SharedPreferencesHelper.getInstance(MyApplication.get().getApplicationContext()).getStringValue(Keys.KEY_DEVICE_ID), MyApplication.get().getCurrUser().getMallId(), MyApplication.get().getCurrUser().getType());
         SerialPortEngineSmall.getInstance().sendMsg(new Gson().toJson(msg));
     }
 
     public static void face_ton() {
-        Message msg = new Message(FACE_TON, SharedPreferencesHelper.getInstance(MyApplication.get().getApplicationContext()).getStringValue(Keys.KEY_DEVICE_ID), MyApplication.get().getCurrUser().getMallId());
+        Message msg = new Message(FACE_TON, SharedPreferencesHelper.getInstance(MyApplication.get().getApplicationContext()).getStringValue(Keys.KEY_DEVICE_ID), MyApplication.get().getCurrUser().getMallId(), MyApplication.get().getCurrUser().getType());
         SerialPortEngineSmall.getInstance().sendMsg(new Gson().toJson(msg));
     }
 

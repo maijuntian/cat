@@ -19,6 +19,7 @@ import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
@@ -67,8 +68,8 @@ public interface CatDoctorService {
     @POST("android/data/api/information/updateInformation")
     Observable<CDRespone<Object>> saveUserInfo( @Body RequestBody json);
 
-    @POST("doctorMall/report/quit")
-    Observable<CDRespone<Object>> quit(@Query("accessToken") String accessToken, @Body RequestBody json);
+    @GET("android/data/api/uploadData/end")
+    Observable<CDRespone<Object>> quit();
 
     @POST("app/getNewVersion")
     Observable<CDRespone<Version>> getNewVersion(@Body RequestBody json);
@@ -80,5 +81,12 @@ public interface CatDoctorService {
     @FormUrlEncoded
     Observable<CDRespone<List<Symptom>>> getSymptom(@Field("accessToken") String accessToken);
 
+
+    @POST("android/data/api/answer/physicalResult")
+    Observable<CDRespone<Object>> physicalResult(@Body RequestBody json);
+
+
+    @POST("android/data/api/upload/img")
+    Observable<CDRespone<Object>> uploadImgInfo(@Body RequestBody json);
 }
 

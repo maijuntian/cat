@@ -45,6 +45,7 @@ dependencies {
     implementation 'org.java-websocket:Java-WebSocket:1.3.6'
     implementation 'com.wonderkiln:camerakit:0.13.0'
     implementation 'me.panpf:spider-web-score-view:1.0.1'
-
-    implementation "com.facebook.react:react-native:+"
+    compile ('com.tencent.qcloud:cosxml-lite:5.4.29'){
+        exclude group:'com.tencent.qcloud', module: 'mtaUtils' //关闭 mta上报功能
+    }
 }

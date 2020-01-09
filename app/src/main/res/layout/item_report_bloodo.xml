@@ -23,22 +23,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="457px"
-            android:layout_marginTop="115px"
+            android:layout_marginTop="110px"
             android:src="@mipmap/report_bloodo_tip_bloodo"
             android:visibility="gone" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="781px"
-            android:layout_marginTop="160px"
+            android:layout_marginLeft="441px"
+            android:layout_marginTop="115px"
+            android:visibility="gone"
             android:src="@mipmap/report_bloodo_tip_n" />
 
         <TextView
             android:id="@+id/tv_bo"
             style="@style/text_green"
-            android:layout_marginLeft="902px"
-            android:layout_marginTop="150px"
+            android:layout_marginTop="100px"
+            android:layout_marginLeft="632px"
             android:text="正常"
             android:textSize="60px"
             android:textStyle="bold" />
@@ -68,15 +69,16 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="759px"
-            android:layout_marginTop="508px"
+            android:layout_marginLeft="441px"
+            android:layout_marginTop="422px"
+            android:visibility="gone"
             android:src="@mipmap/report_bloodo_tip_n" />
 
         <TextView
             android:id="@+id/tv_pluse"
             style="@style/text_green"
-            android:layout_marginLeft="902px"
-            android:layout_marginTop="500px"
+            android:layout_marginLeft="632px"
+            android:layout_marginTop="400px"
             android:text="正常"
             android:textSize="60px"
             android:textStyle="bold" />
@@ -97,18 +99,18 @@
 
         <com.healthmall.sail.cat_doctor.widget.BloodoHorizontalProgressView
             android:id="@+id/hp_bo"
-            android:layout_width="1103px"
+            android:layout_width="603px"
             android:layout_height="80px"
-            android:layout_marginLeft="481px"
-            android:layout_marginTop="240px" />
+            android:layout_marginLeft="285px"
+            android:layout_marginTop="180px" />
 
 
         <com.healthmall.sail.cat_doctor.widget.BloodoHorizontalProgressView
             android:id="@+id/hp_pluse"
-            android:layout_width="1103px"
+            android:layout_width="603px"
             android:layout_height="80px"
-            android:layout_marginLeft="481px"
-            android:layout_marginTop="590px" />
+            android:layout_marginLeft="285px"
+            android:layout_marginTop="480px" />
 
 
     </RelativeLayout>

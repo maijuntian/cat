@@ -67,8 +67,8 @@
         android:id="@+id/iv_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="273px"
-        android:layout_marginTop="450px"
+        android:layout_marginLeft="50px"
+        android:layout_marginTop="600px"
         android:src="@mipmap/examine_index_left_n" />
 
     <RelativeLayout
@@ -81,8 +81,8 @@
             android:id="@+id/tv_progress_index"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="331px"
-            android:layout_marginTop="200px"
+            android:layout_marginLeft="178px"
+            android:layout_marginTop="373px"
             android:text="001"
             android:textColor="@color/mmmgray"
             android:textSize="500px" />
@@ -91,8 +91,8 @@
             android:id="@+id/lv_answers"
             android:layout_width="346px"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="1200px"
+            android:layout_marginTop="888px"
+            android:layout_marginLeft="361px"
             android:divider="@color/trans"
             android:dividerHeight="28px"
             android:scrollbars="none" />
@@ -100,9 +100,9 @@
         <TextView
             android:id="@+id/tv_question_content"
             style="@style/text_mblack"
-            android:layout_width="845px"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="331px"
+            android:layout_width="700px"
+            android:layout_marginTop="600px"
+            android:layout_marginLeft="150px"
             android:gravity="center_horizontal"
             android:text=""
             android:textSize="48px" />
@@ -184,8 +184,8 @@
         android:id="@+id/ll_result"
         android:layout_width="607px"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="646px"
-        android:layout_marginTop="187px"
+        android:layout_marginTop="400px"
+        android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:visibility="gone">

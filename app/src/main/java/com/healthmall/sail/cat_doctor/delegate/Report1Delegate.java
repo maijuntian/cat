@@ -579,9 +579,9 @@ public class Report1Delegate extends BaseDelegate {
 
                     TextView tvBo = viewHolder.findViewById(R.id.tv_bo);
                     TextView tvPluse = viewHolder.findViewById(R.id.tv_pluse);
-                    tvBo.setText(bo + "");
+                    tvBo.setText(report.getBloodOxygenReport().getBoResult());
                     tvBo.setTextColor(report.getBloodOxygenReport().getBoTextColor(mContext));
-                    tvPluse.setText(pr + "");
+                    tvPluse.setText(report.getBloodOxygenReport().getPlusResult());
                     tvPluse.setTextColor(report.getBloodOxygenReport().getPluseTextColor(mContext));
                     BloodoHorizontalProgressView hpBo = viewHolder.findViewById(R.id.hp_bo);
                     BloodoHorizontalProgressView hpPluse = viewHolder.findViewById(R.id.hp_pluse);

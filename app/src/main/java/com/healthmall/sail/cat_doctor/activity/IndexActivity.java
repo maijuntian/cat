@@ -2,6 +2,7 @@ package com.healthmall.sail.cat_doctor.activity;
 
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
 
 import com.google.gson.Gson;
 import com.healthmall.sail.cat_doctor.MyApplication;
@@ -30,10 +31,10 @@ public class IndexActivity extends BaseActivity<IndexDelegate> {
 
     private final long delay = 60000;
 
-    @OnClick(R.id.iv_video)
-    public void iv_videoClick() {
-        startActivity(VideoActivity.class, false);
-    }
+//    @OnClick(R.id.iv_video)
+//    public void iv_videoClick() {
+//        startActivity(VideoActivity.class, false);
+//    }
 
     @OnClick(R.id.iv_manager)
     public void iv_managerClick() {
@@ -44,6 +45,11 @@ public class IndexActivity extends BaseActivity<IndexDelegate> {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        DisplayMetrics dm = getResources().getDisplayMetrics();
+        log("分辨率(宽): " + dm.widthPixels);
+        log("分辨率(高): " + dm.heightPixels);
 
 //        startActivity(VideoActivity.class, false);
 
@@ -67,7 +73,7 @@ public class IndexActivity extends BaseActivity<IndexDelegate> {
     }
 
     @OnClick(R.id.rl_root)
-    public void rl_rootClick(){
+    public void rl_rootClick() {
 //        private String mallId;
 //        private String memberName;
 //        private Integer memberSex;
@@ -82,7 +88,7 @@ public class IndexActivity extends BaseActivity<IndexDelegate> {
 //        User user = new User("test", "测试用户", 0, "", "testtoken", "answerId", "", 20);
 //        MyApplication.get().loginSucc(user);
 
-//        MyApplication.get().loginSucc(new Gson().fromJson("{\"isPhysical\":[{\"type\":\"气虚质\",\"score\":59,\"rank\":1},{\"type\":\"痰湿质\",\"score\":65,\"rank\":1},{\"type\":\"阳虚质\",\"score\":50,\"rank\":1},{\"type\":\"特禀质\",\"score\":64,\"rank\":1},{\"type\":\"阴虚质\",\"score\":50,\"rank\":1}],\"memberAge\":18,\"isFcImg\":\"https://panda-1257270219.cos.ap-guangzhou.myqcloud.com/wxuser-1/wxf6b91ba0966277bd.o6zAJs0Y7qMlYcOF7fTkmchaCqK4.z5gIhzaZA1tG754336c35612032f06385abb48fa0a4a.png\",\"memberName\":\"朱耘籍的爸爸\",\"memHeadImg\":\"https://wx.qlogo.cn/mmopen/vi_32/PHlRqre8XRS8qEFThHR4JCLeVxOtaS2p9GpPZ2UpODOguL5QiaReLxiaQsdoOSUlMTZ6QJ0f3MeEjpibibYfWBZyew/132\",\"message\":\"unlock\",\"type\":\"1\",\"memberSex\":\"0\",\"isInfo\":true,\"accessToken\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkZXZpY2VOdW0iOiJCQzAwMDAwMSIsImFwcGxldFVzZXJJZCI6IjExODExODU4NDk2MDgzOTI3MTEiLCJleHAiOjE1NzA3ODk5NzEsImNoZWNrSWQiOiIxMTgxNTA4NTA3NjE3MjIyNjg0In0.aPPtQD0duksQ_mivG2T5ZjHTjYzd70dy55vw_MMURvQ\",\"userId\":\"1181185849608392711\",\"isTgImg\":\"https://panda-1257270219.cos.ap-guangzhou.myqcloud.com/wxuser-1/wxf6b91ba0966277bd.o6zAJs0Y7qMlYcOF7fTkmchaCqK4.z5gIhzaZA1tG754336c35612032f06385abb48fa0a4a.png\"}", User.class));
+        MyApplication.get().loginSucc(new Gson().fromJson("{\"isPhysical\":[{\"type\":\"气虚质\",\"score\":59,\"rank\":1},{\"type\":\"痰湿质\",\"score\":65,\"rank\":1},{\"type\":\"阳虚质\",\"score\":50,\"rank\":1},{\"type\":\"特禀质\",\"score\":64,\"rank\":1},{\"type\":\"阴虚质\",\"score\":50,\"rank\":1}],\"memberAge\":18,\"isFcImg\":\"https://panda-1257270219.cos.ap-guangzhou.myqcloud.com/wxuser-1/wxf6b91ba0966277bd.o6zAJs0Y7qMlYcOF7fTkmchaCqK4.z5gIhzaZA1tG754336c35612032f06385abb48fa0a4a.png\",\"memberName\":\"朱耘籍的爸爸\",\"memHeadImg\":\"https://wx.qlogo.cn/mmopen/vi_32/PHlRqre8XRS8qEFThHR4JCLeVxOtaS2p9GpPZ2UpODOguL5QiaReLxiaQsdoOSUlMTZ6QJ0f3MeEjpibibYfWBZyew/132\",\"message\":\"unlock\",\"type\":\"1\",\"memberSex\":\"0\",\"isInfo\":true,\"accessToken\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkZXZpY2VOdW0iOiJCQzAwMDAwMSIsImFwcGxldFVzZXJJZCI6IjExODExODU4NDk2MDgzOTI3MTEiLCJleHAiOjE1NzA3ODk5NzEsImNoZWNrSWQiOiIxMTgxNTA4NTA3NjE3MjIyNjg0In0.aPPtQD0duksQ_mivG2T5ZjHTjYzd70dy55vw_MMURvQ\",\"userId\":\"1181185849608392711\",\"isTgImg\":\"https://panda-1257270219.cos.ap-guangzhou.myqcloud.com/wxuser-1/wxf6b91ba0966277bd.o6zAJs0Y7qMlYcOF7fTkmchaCqK4.z5gIhzaZA1tG754336c35612032f06385abb48fa0a4a.png\"}", User.class));
     }
 
     @Override

@@ -85,7 +85,7 @@
             style="@style/text_white"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="42px"
+            android:layout_marginBottom="62px"
             android:background="@drawable/button_start_selector" />
 
         <TextView
@@ -100,13 +100,13 @@
         android:id="@+id/rl_step23"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <LinearLayout
             android:id="@+id/ll_bloodo_tip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="370px"
+            android:layout_marginLeft="270px"
             android:layout_marginTop="170px"
             android:orientation="horizontal">
 
@@ -127,7 +127,7 @@
             android:id="@+id/wv_blood_o"
             android:layout_width="290px"
             android:layout_height="350px"
-            android:layout_marginLeft="398px"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="280px" />
 
         <TextView
@@ -180,27 +180,12 @@
                 android:textSize="24px" />
         </LinearLayout>
 
-        <View
-            android:layout_width="1px"
-            android:layout_height="507px"
-            android:layout_marginLeft="758px"
-            android:layout_marginTop="168px"
-            android:background="@color/mgray" />
-
-        <View
-            android:id="@+id/divider"
-            android:layout_width="1px"
-            android:layout_height="120px"
-            android:layout_marginLeft="758px"
-            android:layout_marginTop="675px"
-            android:background="@color/mgray"
-            android:visibility="invisible" />
 
 
         <TextView
             style="@style/text_mgray"
-            android:layout_marginLeft="819px"
-            android:layout_marginTop="168px"
+            android:layout_marginLeft="119px"
+            android:layout_marginTop="850px"
             android:text="脉搏数"
             android:textSize="32px" />
 
@@ -209,8 +194,8 @@
             android:id="@+id/rl_pluse_rate"
             android:layout_width="813px"
             android:layout_height="428px"
-            android:layout_marginLeft="819px"
-            android:layout_marginTop="240px">
+            android:layout_marginLeft="121px"
+            android:layout_marginTop="900px">
 
             <com.healthmall.sail.cat_doctor.widget.PulseRateView
                 android:id="@+id/prv_pluse_rate"
@@ -241,12 +226,10 @@
 
 
         <RelativeLayout
-
             android:id="@+id/rl_result1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/ll_bloodo_tip"
-            android:layout_alignRight="@id/divider"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="696px">
 
             <TextView
@@ -278,13 +261,13 @@
             android:id="@+id/rl_result2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/rl_pluse_rate"
-            android:layout_alignRight="@id/rl_pluse_rate"
-            android:layout_marginTop="696px">
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1400px">
 
             <TextView
                 android:id="@+id/tv_result_tip2"
                 style="@style/text_mgray"
+                android:layout_marginRight="300px"
                 android:text="解读结果"
                 android:textSize="24px"
                 android:visibility="visible" />

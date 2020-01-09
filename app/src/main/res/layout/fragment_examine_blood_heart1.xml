@@ -91,7 +91,7 @@
             style="@style/text_white"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="42px"
+            android:layout_marginBottom="62px"
             android:background="@drawable/button_start_selector"
             android:text="" />
 
@@ -101,13 +101,12 @@
         android:id="@+id/rl_step23"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone">
-
+        android:visibility="visible">
 
         <TextView
             style="@style/text_mgray"
-            android:layout_marginLeft="438px"
-            android:layout_marginTop="73px"
+            android:layout_marginLeft="290px"
+            android:layout_marginTop="200px"
             android:text="血压"
             android:textSize="32px" />
 
@@ -115,12 +114,12 @@
             android:id="@+id/rl_hp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="439px"
-            android:layout_marginTop="153px">
+            android:layout_marginLeft="320px"
+            android:layout_marginTop="280px">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="167px"
+                android:layout_height="482px"
                 android:layout_marginLeft="20px"
                 android:layout_marginTop="10px"
                 android:src="@mipmap/bp_hr_bp_bg" />
@@ -159,12 +158,12 @@
             android:id="@+id/rl_lp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="726px"
-            android:layout_marginTop="153px">
+            android:layout_marginLeft="607px"
+            android:layout_marginTop="280px">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="167px"
+                android:layout_height="482px"
                 android:layout_marginLeft="20px"
                 android:layout_marginTop="10px"
                 android:src="@mipmap/bp_hr_bp_bg" />
@@ -202,36 +201,36 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="395px"
-            android:layout_marginTop="330px"
+            android:layout_marginLeft="180px"
+            android:layout_marginTop="457px"
             android:src="@mipmap/bp_hr_virline" />
 
         <View
             android:layout_width="145px"
             android:layout_height="106px"
-            android:layout_marginLeft="582px"
-            android:layout_marginTop="330px"
+            android:layout_marginLeft="463px"
+            android:layout_marginTop="457px"
             android:background="#1a00b99e" />
 
         <TextView
             style="@style/text_mgray"
-            android:layout_marginLeft="633px"
-            android:layout_marginTop="265px"
+            android:layout_marginLeft="514px"
+            android:layout_marginTop="392px"
             android:text="偏高"
             android:textSize="24px" />
 
 
         <TextView
             style="@style/text_green"
-            android:layout_marginLeft="633px"
-            android:layout_marginTop="372px"
+            android:layout_marginLeft="514px"
+            android:layout_marginTop="499px"
             android:text="正常"
             android:textSize="24px" />
 
         <TextView
             style="@style/text_mgray"
-            android:layout_marginLeft="633px"
-            android:layout_marginTop="469px"
+            android:layout_marginLeft="514px"
+            android:layout_marginTop="596px"
             android:text="偏低"
             android:textSize="24px" />
 
@@ -255,8 +254,8 @@
             android:id="@+id/rl_heart_rate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="1056px"
-            android:layout_marginTop="300px">
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1000px">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -299,23 +298,23 @@
         <TextView
             android:id="@+id/tv_heart_rate_high"
             style="@style/text_green"
-            android:layout_marginLeft="1017px"
-            android:layout_marginTop="395px"
+            android:layout_marginTop="1100px"
+            android:layout_marginLeft="200px"
             android:text="100"
             android:textSize="18px" />
 
         <TextView
             android:id="@+id/tv_heart_rate_low"
             style="@style/text_green"
-            android:layout_marginLeft="1516px"
-            android:layout_marginTop="395px"
+            android:layout_marginTop="1100px"
+            android:layout_marginLeft="810px"
             android:text="60"
             android:textSize="18px" />
 
         <TextView
             style="@style/text_mgray"
-            android:layout_marginLeft="1562px"
-            android:layout_marginTop="395px"
+            android:layout_marginTop="1100px"
+            android:layout_marginLeft="860px"
             android:text="次/分钟"
             android:textSize="18px" />
 
@@ -325,8 +324,8 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@id/rl_hp"
             android:layout_alignRight="@+id/rl_lp"
-            android:layout_marginTop="661px"
-            android:visibility="gone">
+            android:layout_marginTop="800px"
+            android:visibility="visible">
 
             <TextView
                 android:id="@+id/tv_result_tip1"
@@ -355,10 +354,9 @@
             android:id="@+id/rl_result2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/tv_heart_rate_high"
-            android:layout_alignRight="@id/tv_heart_rate_low"
-            android:layout_marginTop="661px"
-            android:visibility="gone">
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1361px"
+            android:visibility="visible">
 
             <TextView
                 android:id="@+id/tv_result_tip2"

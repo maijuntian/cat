@@ -72,7 +72,7 @@ public class BloodoFragment extends BaseFragment<BloodoDelegate> {
         return 60000;
     }
 
-     /*int times;
+     int times;
 
     Handler handler = new Handler() {
         @Override
@@ -86,7 +86,7 @@ public class BloodoFragment extends BaseFragment<BloodoDelegate> {
             }
             times++;
         }
-    };*/
+    };
 
     @OnClick(R.id.tv_start)
     public void tv_startClick() {
@@ -94,8 +94,8 @@ public class BloodoFragment extends BaseFragment<BloodoDelegate> {
         viewDelegate.showStep2();
         SerialPortCmd.bloodOX();
 
-//        times = 0;
-//        handler.sendEmptyMessageDelayed(0, 10000);
+        times = 0;
+        handler.sendEmptyMessageDelayed(0, 10000);
     }
 
     @Override

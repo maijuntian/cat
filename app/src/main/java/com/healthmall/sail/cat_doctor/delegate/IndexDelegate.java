@@ -23,8 +23,6 @@ public class IndexDelegate extends BaseDelegate {
 
     @Bind(R.id.iv_qrcode)
     ImageView ivQrcode;
-    @Bind(R.id.iv_video)
-    ImageView ivVideo;
     @Bind(R.id.iv_manager)
     ImageView ivManager;
     @Bind(R.id.iv_logo)

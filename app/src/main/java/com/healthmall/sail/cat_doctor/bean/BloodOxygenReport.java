@@ -101,6 +101,16 @@ public class BloodOxygenReport {
         }
     }
 
+    public String getPlusResult() {
+        if (Integer.parseInt(bm_blox_spO2) >= 100) {
+            return "偏高";
+        } else if (Integer.parseInt(bm_blox_pr) < 60) {
+            return "偏低";
+        } else {
+            return "正常";
+        }
+    }
+
     public int getBoTextColor(Context ctx) {
         if (Integer.parseInt(bm_blox_spO2) >= 94) {
             return ContextCompat.getColor(ctx, R.color.nomal);

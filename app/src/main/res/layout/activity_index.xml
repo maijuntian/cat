@@ -6,14 +6,6 @@
     android:background="@mipmap/await_bg"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/iv_logo"
-        android:visibility="invisible"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40px"
-        android:src="@mipmap/index_jiankangmao_logo"/>
 
     <TextView
         android:id="@+id/tv_time"
@@ -26,17 +18,10 @@
 
     <ImageView
         android:id="@+id/iv_qrcode"
-        android:layout_width="280px"
-        android:layout_height="280px"
+        android:layout_width="470px"
+        android:layout_height="470px"
         android:layout_centerInParent="true" />
 
-    <ImageView
-        android:id="@+id/iv_video"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="880px"
-        android:src="@mipmap/await_video" />
 
     <ImageView
         android:id="@+id/iv_manager"

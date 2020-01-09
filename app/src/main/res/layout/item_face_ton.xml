@@ -7,8 +7,8 @@
         android:id="@+id/rl_face_ton_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="300px"
-        android:layout_marginTop="150px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250px"
         android:gravity="center_horizontal">
 
         <RelativeLayout
@@ -44,9 +44,8 @@
         android:id="@+id/ll_explain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="458px"
-        android:layout_marginTop="150px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1050px"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
@@ -61,7 +60,7 @@
             android:id="@+id/iv_explain_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="94px"
+            android:layout_marginTop="50px"
             android:src="@mipmap/face_ton_face_example" />
 
     </LinearLayout>

@@ -7,41 +7,43 @@
     <ImageView
         android:id="@+id/iv_bg"
         android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="-25px"
         android:src="@mipmap/body_info1_woman" />
 
     <ImageView
+        android:layout_centerVertical="true"
         android:id="@+id/iv_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="255px"
         android:src="@mipmap/body_info1_score1" />
 
     <com.healthmall.sail.cat_doctor.widget.NoPaddingTextView
         android:id="@+id/tv_score"
         style="@style/text_white"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="369px"
+        android:layout_centerVertical="true"
         android:text="90"
         android:textSize="180px"
         android:textStyle="bold" />
 
     <TextView
         style="@style/text_white"
+        android:layout_below="@id/tv_score"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="568px"
         android:text="综合评分"
         android:textSize="30px" />
 
 
     <LinearLayout
         android:layout_width="156px"
-        android:layout_height="134px"
-        android:layout_marginLeft="506px"
-        android:layout_marginTop="350px"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="106px"
+        android:layout_centerVertical="true"
+        android:paddingBottom="170px"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -61,9 +63,10 @@
 
     <LinearLayout
         android:layout_width="156px"
-        android:layout_height="134px"
-        android:layout_marginLeft="506px"
-        android:layout_marginTop="484px"
+        android:layout_height="wrap_content"
+        android:paddingTop="100px"
+        android:layout_marginLeft="106px"
+        android:layout_centerVertical="true"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -84,9 +87,10 @@
 
     <LinearLayout
         android:layout_width="156px"
-        android:layout_height="134px"
-        android:layout_marginLeft="1261px"
-        android:layout_marginTop="350px"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="815px"
+        android:layout_centerVertical="true"
+        android:paddingBottom="170px"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -106,9 +110,10 @@
 
     <LinearLayout
         android:layout_width="156px"
-        android:layout_height="134px"
-        android:layout_marginLeft="1261px"
-        android:layout_marginTop="484px"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="815px"
+        android:layout_centerVertical="true"
+        android:paddingTop="100px"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -128,8 +133,8 @@
 
     <TextView
         style="@style/text_mgray"
-        android:layout_marginLeft="468px"
-        android:layout_marginTop="73px"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="600px"
         android:text="基础信息"
         android:textSize="32px" />
 

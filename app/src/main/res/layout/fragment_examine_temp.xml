@@ -82,7 +82,7 @@
             style="@style/text_white"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="42px"
+            android:layout_marginBottom="62px"
             android:background="@drawable/button_start_selector" />
 
         <TextView
@@ -95,14 +95,14 @@
 
     <RelativeLayout
         android:id="@+id/rl_step23"
+        android:layout_marginTop="300px"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone">
+        android:layout_height="wrap_content"
+        android:visibility="visible">
 
         <RelativeLayout
-            android:layout_width="1217px"
+            android:layout_width="1080px"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="350px"
             android:layout_marginTop="444px">
 
             <ImageView
@@ -122,7 +122,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="139px"
-            android:layout_marginLeft="568px"
+            android:layout_marginLeft="168px"
             android:layout_marginTop="327px"
             android:orientation="horizontal">
 
@@ -174,10 +174,10 @@
 
         <com.healthmall.sail.cat_doctor.widget.TemperatureView
             android:id="@+id/tv_temp_view"
-            android:layout_width="1069px"
-            android:layout_height="150px"
-            android:layout_marginLeft="424px"
-            android:layout_marginTop="397px"
+            android:layout_width="940px"
+            android:layout_height="73px"
+            android:layout_marginLeft="60px"
+            android:layout_marginTop="460px"
             android:scaleType="fitXY"
             android:src="@mipmap/temp_ruler_meban" />
 
@@ -206,7 +206,7 @@
 
         <TextView
             style="@style/text_mgray"
-            android:layout_marginLeft="494px"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="598px"
             android:gravity="center_horizontal"
             android:text="@string/temp_tip"

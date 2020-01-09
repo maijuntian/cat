@@ -26,7 +26,7 @@
             <LinearLayout
                 android:layout_width="300px"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="468px"
+                android:layout_marginLeft="180px"
                 android:layout_marginTop="151px"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
@@ -85,7 +85,7 @@
             <LinearLayout
                 android:layout_width="300px"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="1150px"
+                android:layout_marginLeft="580px"
                 android:layout_marginTop="151px"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
@@ -131,8 +131,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="407px"
+                android:layout_marginLeft="230px"
+                android:layout_marginTop="80px"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -248,8 +248,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="921px"
+                android:layout_marginTop="260px"
+                android:layout_marginLeft="230px"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -259,6 +259,7 @@
 
                     <TextView
                         style="@style/text_mgray"
+                        android:textSize="20px"
                         android:text="肌肉率(%)" />
 
                     <LinearLayout
@@ -367,6 +368,7 @@
 
                     <TextView
                         style="@style/text_mgray"
+                        android:textSize="20px"
                         android:text="体脂率(%)" />
 
                     <LinearLayout
@@ -481,14 +483,14 @@
 
             <TextView
                 style="@style/text_mgray"
-                android:layout_marginLeft="408px"
+                android:layout_marginLeft="200px"
                 android:layout_marginTop="105px"
                 android:text="内脏脂肪等级"
                 android:textSize="18px" />
 
             <TextView
                 style="@style/text_mgray"
-                android:layout_marginLeft="619px"
+                android:layout_marginLeft="380px"
                 android:layout_marginTop="105px"
                 android:text="肥胖度"
                 android:textSize="18px" />
@@ -496,7 +498,7 @@
 
             <TextView
                 style="@style/text_mgray"
-                android:layout_marginLeft="802px"
+                android:layout_marginLeft="530px"
                 android:layout_marginTop="105px"
                 android:text="水肿度"
                 android:textSize="18px" />
@@ -505,7 +507,7 @@
             <com.healthmall.sail.cat_doctor.widget.NoPaddingTextView
                 android:id="@+id/tv_vfl"
                 style="@style/text_black"
-                android:layout_marginLeft="385px"
+                android:layout_marginLeft="185px"
                 android:layout_marginTop="135px"
                 android:drawablePadding="10px"
                 android:drawableTop="@mipmap/report_body_fat1"
@@ -516,7 +518,7 @@
             <com.healthmall.sail.cat_doctor.widget.NoPaddingTextView
                 android:id="@+id/tv_doo"
                 style="@style/text_black"
-                android:layout_marginLeft="570px"
+                android:layout_marginLeft="340px"
                 android:layout_marginTop="135px"
                 android:drawablePadding="10px"
                 android:drawableTop="@mipmap/report_body_fat2"
@@ -527,7 +529,7 @@
             <com.healthmall.sail.cat_doctor.widget.NoPaddingTextView
                 android:id="@+id/tv_ed"
                 style="@style/text_black"
-                android:layout_marginLeft="753px"
+                android:layout_marginLeft="490px"
                 android:layout_marginTop="135px"
                 android:drawablePadding="10px"
                 android:drawableTop="@mipmap/report_body_fat3"
@@ -537,37 +539,37 @@
 
             <com.healthmall.sail.cat_doctor.widget.BlueCircleProgressView
                 android:id="@+id/cp_vfl"
-                android:layout_width="155px"
-                android:layout_height="155px"
-                android:layout_marginLeft="385px"
+                android:layout_width="130px"
+                android:layout_height="130px"
+                android:layout_marginLeft="185px"
                 android:layout_marginTop="135px" />
 
             <com.healthmall.sail.cat_doctor.widget.BlueCircleProgressView
                 android:id="@+id/cp_doo"
-                android:layout_width="155px"
-                android:layout_height="155px"
-                android:layout_marginLeft="570px"
+                android:layout_width="130px"
+                android:layout_height="130px"
+                android:layout_marginLeft="340px"
                 android:layout_marginTop="135px" />
 
             <com.healthmall.sail.cat_doctor.widget.BlueCircleProgressView
                 android:id="@+id/cp_ed"
-                android:layout_width="155px"
-                android:layout_height="155px"
-                android:layout_marginLeft="753px"
+                android:layout_width="130px"
+                android:layout_height="130px"
+                android:layout_marginLeft="490px"
                 android:layout_marginTop="135px" />
 
             <TextView
                 style="@style/text_mgray"
-                android:layout_marginLeft="965px"
-                android:layout_marginTop="130px"
+                android:layout_marginLeft="630px"
+                android:layout_marginTop="100px"
                 android:text="BMI(kg/m2)"
                 android:textSize="20px" />
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="965px"
-                android:layout_marginTop="160px">
+                android:layout_marginLeft="630px"
+                android:layout_marginTop="140px">
 
                 <TextView
                     style="@style/text_mgray"
@@ -577,14 +579,14 @@
                 <TextView
                     android:id="@+id/tv_bmi_nl"
                     style="@style/text_mgray"
-                    android:layout_marginLeft="130px"
+                    android:layout_marginLeft="90px"
                     android:text="10.5"
                     android:textSize="10px" />
 
                 <TextView
                     android:id="@+id/tv_bmi_nh"
                     style="@style/text_mgray"
-                    android:layout_marginLeft="270px"
+                    android:layout_marginLeft="190px"
                     android:text="24.0"
                     android:textSize="10px" />
             </RelativeLayout>
@@ -592,10 +594,10 @@
 
             <RelativeLayout
                 android:id="@+id/rl_bmi"
-                android:layout_width="420px"
+                android:layout_width="300px"
                 android:layout_height="15px"
-                android:layout_marginLeft="965px"
-                android:layout_marginTop="175px">
+                android:layout_marginLeft="630px"
+                android:layout_marginTop="155px">
 
                 <com.healthmall.sail.cat_doctor.widget.HorizontalProgress
                     android:id="@+id/hp_bmi"
@@ -651,14 +653,14 @@
                 android:id="@+id/tv_bmi"
                 style="@style/text_black"
                 android:layout_marginLeft="20px"
-                android:layout_marginTop="150px"
+                android:layout_marginTop="130px"
                 android:layout_toRightOf="@id/rl_bmi"
                 android:text="58"
                 android:textSize="60px" />
 
             <TextView
                 style="@style/text_mgray"
-                android:layout_marginLeft="965px"
+                android:layout_marginLeft="630px"
                 android:layout_marginTop="235px"
                 android:text="含水比率(%)"
                 android:textSize="20px" />
@@ -666,7 +668,7 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="965px"
+                android:layout_marginLeft="630px"
                 android:layout_marginTop="265px">
 
                 <TextView
@@ -677,14 +679,14 @@
                 <TextView
                     android:id="@+id/tv_wr_nl"
                     style="@style/text_mgray"
-                    android:layout_marginLeft="130px"
+                    android:layout_marginLeft="90px"
                     android:text="10.5"
                     android:textSize="10px" />
 
                 <TextView
                     android:id="@+id/tv_wr_nh"
                     style="@style/text_mgray"
-                    android:layout_marginLeft="270px"
+                    android:layout_marginLeft="190px"
                     android:text="24.0"
                     android:textSize="10px" />
             </RelativeLayout>
@@ -692,9 +694,9 @@
 
             <RelativeLayout
                 android:id="@+id/rl_water_rate"
-                android:layout_width="420px"
+                android:layout_width="300px"
                 android:layout_height="15px"
-                android:layout_marginLeft="965px"
+                android:layout_marginLeft="630px"
                 android:layout_marginTop="280px">
 
                 <com.healthmall.sail.cat_doctor.widget.HorizontalProgress
@@ -763,14 +765,14 @@
         <RelativeLayout
             android:id="@+id/rl_body_bg4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="474px"
             android:background="@mipmap/report_body_4"
             android:visibility="visible">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="467px"
+                android:layout_width="395px"
+                android:layout_height="273px"
+                android:layout_marginLeft="217px"
                 android:layout_marginTop="103px"
                 android:src="@mipmap/report_body_muscle_result" />
 
@@ -778,7 +780,7 @@
                 android:id="@+id/iv_up_bal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="633px"
+                android:layout_marginLeft="383px"
                 android:layout_marginTop="185px"
                 android:src="@mipmap/report_body_green" />
 
@@ -786,7 +788,7 @@
                 android:id="@+id/iv_down_bal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="760px"
+                android:layout_marginLeft="510px"
                 android:layout_marginTop="185px"
                 android:src="@mipmap/report_body_green" />
 
@@ -795,7 +797,7 @@
                 android:id="@+id/iv_up_unbal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="625px"
+                android:layout_marginLeft="375px"
                 android:layout_marginTop="225px"
                 android:src="@mipmap/report_body_red" />
 
@@ -803,7 +805,7 @@
                 android:id="@+id/iv_down_unbal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="752px"
+                android:layout_marginLeft="502px"
                 android:layout_marginTop="225px"
                 android:src="@mipmap/report_body_red" />
 
@@ -812,7 +814,7 @@
                 android:id="@+id/iv_up_unstr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="617px"
+                android:layout_marginLeft="367px"
                 android:layout_marginTop="264px"
                 android:src="@mipmap/report_body_red" />
 
@@ -820,7 +822,7 @@
                 android:id="@+id/iv_down_unstr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="744px"
+                android:layout_marginLeft="494px"
                 android:layout_marginTop="264px"
                 android:src="@mipmap/report_body_red" />
 
@@ -829,7 +831,7 @@
                 android:id="@+id/iv_up_nomal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="609px"
+                android:layout_marginLeft="359px"
                 android:layout_marginTop="302px"
                 android:src="@mipmap/report_body_green" />
 
@@ -837,7 +839,7 @@
                 android:id="@+id/iv_down_nomal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="736px"
+                android:layout_marginLeft="486px"
                 android:layout_marginTop="302px"
                 android:src="@mipmap/report_body_green" />
 
@@ -846,7 +848,7 @@
                 android:id="@+id/iv_up_str"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="602px"
+                android:layout_marginLeft="352px"
                 android:layout_marginTop="340px"
                 android:src="@mipmap/report_body_green" />
 
@@ -854,7 +856,7 @@
                 android:id="@+id/iv_down_str"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="728px"
+                android:layout_marginLeft="478px"
                 android:layout_marginTop="340px"
                 android:src="@mipmap/report_body_green" />
 
@@ -864,7 +866,7 @@
                 android:layout_width="226px"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="1167px"
+                android:layout_marginLeft="667px"
                 android:layout_marginTop="133px"
                 app:lineColor="#80a7a7a7"
                 app:scoreColor="#800079ff"
@@ -873,8 +875,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="1242px"
-                android:layout_marginTop="53px"
+                android:layout_marginLeft="742px"
+                android:layout_marginTop="83px"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
@@ -895,7 +897,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="1091px"
+                android:layout_marginLeft="591px"
                 android:layout_marginTop="180px"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
@@ -917,7 +919,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="1402px"
+                android:layout_marginLeft="902px"
                 android:layout_marginTop="180px"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
@@ -940,7 +942,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="1131px"
+                android:layout_marginLeft="631px"
                 android:layout_marginTop="305px"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
@@ -962,7 +964,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="1359px"
+                android:layout_marginLeft="859px"
                 android:layout_marginTop="305px"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
@@ -992,7 +994,7 @@
             <LinearLayout
                 android:layout_width="230px"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="488px"
+                android:layout_marginLeft="225px"
                 android:layout_marginTop="150px"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
@@ -1027,7 +1029,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="960px"
+                    android:layout_marginLeft="470px"
                     android:gravity="center_horizontal"
                     android:orientation="vertical">
 

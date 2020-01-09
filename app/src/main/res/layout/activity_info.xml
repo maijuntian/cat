@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="196px"
+            android:layout_marginTop="400px"
             android:orientation="horizontal">
 
 
@@ -47,12 +47,14 @@
                 android:checked="true"
                 android:drawableTop="@drawable/info_men_selector"
                 android:textSize="34px"
+                android:layout_marginLeft="-350px"
                 android:textStyle="bold" />
 
             <RadioButton
                 android:id="@+id/rb_women"
                 style="@style/text_sgray"
-                android:layout_marginLeft="510px"
+                android:layout_marginLeft="350px"
+                android:layout_marginRight="-350px"
                 android:button="@drawable/nav_trans"
                 android:drawableTop="@drawable/info_women_selector"
                 android:textSize="34px"
@@ -65,6 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:gravity="center_horizontal"
+            android:layout_marginTop="300px"
             android:orientation="vertical">
 
             <ImageView

@@ -44,8 +44,6 @@ public class BloodoDelegate extends AppDelegate {
     WaterView wvBloodO;
     @Bind(R.id.tv_blood_o)
     NoPaddingTextView tvBloodO;
-    @Bind(R.id.divider)
-    View divider;
     @Bind(R.id.prv_pluse_rate)
     public PulseRateView prvPluseRate;
     @Bind(R.id.rl_pluse_rate)

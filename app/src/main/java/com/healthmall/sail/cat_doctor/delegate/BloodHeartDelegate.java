@@ -191,7 +191,8 @@ public class BloodHeartDelegate extends AppDelegate {
 
     public void showStep3(BloodPressureReport bloodPressureReport) {
         initBloodPressure(bloodPressureReport);
-        pvProgress.finish();
+        if (pvProgress != null)
+            pvProgress.finish();
     }
 
     public void showStep3Init(BloodPressureReport bloodPressureReport) {

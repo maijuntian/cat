@@ -167,7 +167,16 @@ public class CatDoctorApi extends BaseRetrofitService2<CatDoctorService> {
         bodyReport.setSex(MyApplication.get().getCurrUser().getMemberSex());
         bodyReport.setAge(MyApplication.get().getCurrUser().getMemberAge());
 
-        return checkNoDialog(mService.bodyReport(new MParams().getJsonRequestBody(bodyReport)), ctx).flatMap(new Func1<Object, Observable<BodyRespone>>() {
+
+        BodyRespone bodyRespone = new BodyRespone(MyApplication.get().getCurrUser().getMemberSex(), MyApplication.get().getCurrUser().getMemberAge());
+        bodyRespone.setLowerLimbBalance(Float.parseFloat(bodyReport.getBm_bf_llmm()), Float.parseFloat(bodyReport.getBm_bf_rlmm()));
+        bodyRespone.setWaistToHipRatioResult(MyApplication.get().getCurrUser().getMemberSex(), Float.parseFloat(bodyReport.getBm_bf_wthr()));
+        bodyRespone.setUpperLimbBalance(Float.parseFloat(bodyReport.getBm_bf_lhmm()), Float.parseFloat(bodyReport.getBm_bf_rhmm()));
+        bodyRespone.setUpperLimbDeveloped(Float.parseFloat(bodyReport.getBm_bf_lhmm()), Float.parseFloat(bodyReport.getBm_bf_rhmm()));
+        bodyRespone.setLowerLimbDeveloped(Float.parseFloat(bodyReport.getBm_bf_llmm()), Float.parseFloat(bodyReport.getBm_bf_rlmm()));
+        return Observable.just(bodyRespone);
+
+       /* return checkNoDialog(mService.bodyReport(new MParams().getJsonRequestBody(bodyReport)), ctx).flatMap(new Func1<Object, Observable<BodyRespone>>() {
             @Override
             public Observable<BodyRespone> call(Object o) {
                 BodyRespone bodyRespone = new BodyRespone(MyApplication.get().getCurrUser().getMemberSex(), MyApplication.get().getCurrUser().getMemberAge());
@@ -178,7 +187,7 @@ public class CatDoctorApi extends BaseRetrofitService2<CatDoctorService> {
                 bodyRespone.setLowerLimbDeveloped(Float.parseFloat(bodyReport.getBm_bf_llmm()), Float.parseFloat(bodyReport.getBm_bf_rlmm()));
                 return Observable.just(bodyRespone);
             }
-        });
+        });*/
     }
 
     public Observable<BodyRespone> temperatureReport(TemperatureReport temperatureReport, Context ctx) {

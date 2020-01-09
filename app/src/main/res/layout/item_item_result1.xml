@@ -8,7 +8,7 @@
 
     <TextView
         style="@style/text_xxgray"
-        android:layout_marginLeft="875px"
+        android:layout_marginLeft="475px"
         android:text="结果解读"
         android:textSize="24px" />
 
@@ -17,7 +17,7 @@
         style="@style/text_xxgray"
         android:layout_width="522px"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="875px"
+        android:layout_marginLeft="475px"
         android:layout_marginTop="30px"
         android:lineSpacingExtra="10px"
         android:text="脾肾阳虚，中医证候名。多由于体质虚弱而感受寒邪
@@ -32,7 +32,7 @@
 
     <TextView
         style="@style/text_xxgray"
-        android:layout_marginLeft="875px"
+        android:layout_marginLeft="475px"
         android:layout_marginTop="38px"
         android:text="注：症候分析来自于中医研究院的协同"
         android:textSize="20px" />

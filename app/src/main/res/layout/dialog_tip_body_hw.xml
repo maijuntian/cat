@@ -18,7 +18,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="351px"
+            android:layout_marginLeft="20px"
             android:orientation="vertical">
 
             <ImageView
@@ -42,7 +42,7 @@
             style="@style/text_white"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="45px"
+            android:layout_marginRight="15px"
             android:background="@drawable/button_body_click_selector"
             android:gravity="center_horizontal"
             android:paddingTop="10px"
@@ -52,7 +52,7 @@
             android:id="@+id/tv_reexamine"
             style="@style/text_blue"
             android:layout_centerVertical="true"
-            android:layout_marginRight="35px"
+            android:layout_marginRight="15px"
             android:layout_toLeftOf="@id/tv_examine_fat"
             android:background="@drawable/button_reexamine_selector"
             android:gravity="center_horizontal"

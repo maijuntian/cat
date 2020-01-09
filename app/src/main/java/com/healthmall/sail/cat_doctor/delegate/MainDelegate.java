@@ -43,8 +43,6 @@ public class MainDelegate extends BaseDelegate {
     ImageView ivHeadIcon;
     @Bind(R.id.iv_vip)
     ImageView ivVip;
-    @Bind(R.id.iv_divider)
-    ImageView ivDivider;
 
     @Override
     public int getRootLayoutId() {
@@ -60,7 +58,6 @@ public class MainDelegate extends BaseDelegate {
         cbVoice.setChecked(MyApplication.get().getCurrUser().isVoice());
 
         if (!Configs.useTemp) {
-            ivDivider.setVisibility(View.GONE);
             ivTemp.setVisibility(View.GONE);
         }
     }

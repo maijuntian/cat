@@ -80,7 +80,7 @@ public class TemperatureView extends View {
     }
 
     private void measureProgress(float temp) { //计算距离左边的像素，33°C起始点距离左边46px，改变蒙版宽度到具体温度，每0.1°是10px
-        progress = 46 + (temp - 33) * 98.5f;
+        progress = 46 + (temp - 33) * 94f;
         MLog.log("计算的位移--->" + progress);
     }
 

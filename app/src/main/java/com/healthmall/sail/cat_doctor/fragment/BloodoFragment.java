@@ -95,7 +95,7 @@ public class BloodoFragment extends BaseFragment<BloodoDelegate> {
         SerialPortCmd.bloodOX();
 
         times = 0;
-        handler.sendEmptyMessageDelayed(0, 10000);
+//        handler.sendEmptyMessageDelayed(0, 10000);
     }
 
     @Override

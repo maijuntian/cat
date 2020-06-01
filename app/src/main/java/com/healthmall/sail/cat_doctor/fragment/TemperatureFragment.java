@@ -69,12 +69,12 @@ public class TemperatureFragment extends BaseFragment<TemperatureDelegate> {
         viewDelegate.showStep2();
         SerialPortCmd.bodyTemp();
 
-        new Handler().postDelayed(new Runnable() {
+       /* new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 serialPortCallBack("OK+BODYTEMP=375");
             }
-        }, 3000);
+        }, 3000);*/
     }
 
     @Override

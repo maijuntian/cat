@@ -100,7 +100,7 @@ public class BodyFragment extends BaseFragment<BodyDelegate> {
         SerialPortCmd.height();
         SerialPortCmd.weight();
 
-        handler.sendEmptyMessageDelayed(0, 1000);
+//        handler.sendEmptyMessageDelayed(0, 1000);
     }
 
 
@@ -109,12 +109,12 @@ public class BodyFragment extends BaseFragment<BodyDelegate> {
         startErrorDelay();
         SerialPortCmd.bodyFat(MyApplication.get().getCurrUser().getMemberSex(), MyApplication.get().getCurrUser().getMemberAge(), ((int) Float.parseFloat(currBodyReport.getBm_weight()) * 10) + "", ((int) Float.parseFloat(currBodyReport.getBm_height()) * 10) + "");
 
-        new Handler().postDelayed(new Runnable() {
+       /* new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 serialPortCallBack("OK+BODYFAT+BF=123+MW=431+TM=302+EF=113+IF=188+RFBW=456+SDM=426+BONYSALTS=25+SM=257+PROTEIN=129+BMI=191+BM=1379+BFR=212+BMR=521+SW=624+VFL=10+BA=18+CS=80+ED=3+DOO=0+MC=32773+WC=43+FC=5+TFR=221+RHFR=49+LHFR=110+RLFR=130+LFFR=141+TMM=100+RHMM=31+LHMM=27+RLMM=115+LLMM=119+NC=333+WWC=416+HIP=899+BUST=903+RAC=257+LAC=269+RTC=539+LTC=536");
             }
-        }, 2000);
+        }, 2000);*/
     }
 
     @Override

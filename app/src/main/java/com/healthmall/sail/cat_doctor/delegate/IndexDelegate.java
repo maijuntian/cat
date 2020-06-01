@@ -25,8 +25,8 @@ public class IndexDelegate extends BaseDelegate {
     ImageView ivQrcode;
     @Bind(R.id.iv_manager)
     ImageView ivManager;
-    @Bind(R.id.iv_logo)
-    ImageView ivLogo;
+//    @Bind(R.id.iv_logo)
+//    ImageView ivLogo;
 
     @Override
     public int getRootLayoutId() {
@@ -37,9 +37,9 @@ public class IndexDelegate extends BaseDelegate {
     public void initWidget() {
         super.initWidget();
 
-        if (Configs.isTaiYangShen) {
+       /* if (Configs.isTaiYangShen) {
             ivLogo.setImageResource(R.mipmap.index_taiyangshen_logo);
-        }
+        }*/
     }
 
     public void initQrCode() {

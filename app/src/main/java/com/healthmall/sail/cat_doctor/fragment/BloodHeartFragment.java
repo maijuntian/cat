@@ -67,12 +67,12 @@ public class BloodHeartFragment extends BaseFragment<BloodHeartDelegate> {
 
         viewDelegate.showStep1();
 
-        new Handler().postDelayed(new Runnable() {
+       /* new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 serialPortCallBack("OK+BLOODPRS+SP=100+DP=80+HR=90");
             }
-        }, 2000);
+        }, 2000);*/
     }
 
     @Override
